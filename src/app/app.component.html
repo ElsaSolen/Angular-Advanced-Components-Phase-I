@@ -6,6 +6,10 @@
   (onDecrease)="updateProgress($event)"
   (onComplete)="completeProgress()"
 ></app-countdown>
+<div class="initInput">
+  <label for="totalCountdown">Init on: </label>
+  <input class="countdown-input" type="text" [(ngModel)]="totalCountdown" />
+</div>
 
 <button (click)="countdown.startCountdown(); progressPercentage = 0">
   Restart
