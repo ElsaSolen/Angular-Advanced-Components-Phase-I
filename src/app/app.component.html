@@ -1,4 +1,7 @@
-<p>Start editing to see some magic happen :)</p>
-
-<app-countdown></app-countdown>
-<app-progress-bar></app-progress-bar>
+<h1>Timer Countdown</h1>
+<app-progress-bar [progress]="progressPercentage"></app-progress-bar>
+<app-countdown
+  [init]="totalCountdown"
+  (onDecrease)="updateProgress($event)"
+  (onComplete)="completeProgress()"
+></app-countdown>

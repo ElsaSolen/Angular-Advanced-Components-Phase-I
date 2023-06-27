@@ -5,4 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  progressPercentage = 11;
+  totalCountdown = 15;
+
+  constructor() {}
+
+  ngOnInit(): void {}
+  updateProgress($event): void {
+    this.progressPercentage =
+      ((this.totalCountdown - $event) / this.totalCountdown) * 100;
+  }
+  completeProgress(): void {
+    console.log('countdown finished');
+  }
+}
