@@ -1,7 +1,12 @@
 <h1>Timer Countdown</h1>
 <app-progress-bar [progress]="progressPercentage"></app-progress-bar>
 <app-countdown
+  #countdown
   [init]="totalCountdown"
   (onDecrease)="updateProgress($event)"
   (onComplete)="completeProgress()"
 ></app-countdown>
+
+<button (click)="countdown.startCountdown(); progressPercentage = 0">
+  Restart
+</button>

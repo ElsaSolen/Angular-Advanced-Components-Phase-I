@@ -10,27 +10,34 @@ export class CountdownComponent implements OnInit {
   @Output() onDecrease = new EventEmitter<number>();
   @Output() onComplete = new EventEmitter<void>();
 
+  private countdownTimerRef: any = null;
   counter = 0;
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.startCountdown();
-  }
+  ngOnInit(): void {}
 
   startCountdown(): void {
     if (this.init > 0) {
+      this.clearTimeout();
       this.counter = this.init;
       this.doCountdown();
     }
   }
 
   doCountdown(): void {
-    setTimeout(() => {
+    this.countdownTimerRef = setTimeout(() => {
       this.counter -= 1;
       this.processCountdown();
       this.onDecrease.emit(this.counter);
     }, 1000);
+  }
+
+  private clearTimeout(): void {
+    if (this.countdownTimerRef) {
+      clearTimeout(this.countdownTimerRef);
+      this.countdownTimerRef = null;
+    }
   }
 
   processCountdown(): void {

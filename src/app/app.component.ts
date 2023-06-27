@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  progressPercentage = 11;
+  progressPercentage = 0;
   totalCountdown = 15;
 
   constructor() {}
