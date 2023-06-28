@@ -11,12 +11,14 @@ button {
   border-radius: 3px;
   color: white;
   float: right;
+  margin-right: 5%;
 }
 
 .countdown-input {
   display: block;
   float: left;
   height: 40px;
+  margin-left: 5%;
   input {
     box-sizing: border-box;
     height: 100%;
