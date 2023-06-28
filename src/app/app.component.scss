@@ -6,9 +6,19 @@ button {
   width: 20%;
   height: 40px;
   display: block;
-  margin: auto;
   background: #38678f;
   border: none;
   border-radius: 3px;
   color: white;
+  float: right;
+}
+
+.countdown-input {
+  display: block;
+  float: left;
+  height: 40px;
+  input {
+    box-sizing: border-box;
+    height: 100%;
+  }
 }
