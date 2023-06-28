@@ -5,7 +5,6 @@ import {
   OnInit,
   EventEmitter,
   OnDestroy,
-  SimpleChanges,
 } from '@angular/core';
 
 @Component({
@@ -25,7 +24,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.startCountdown();
   }
 
