@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   progressPercentage = 0;
-  totalCountdown = 15;
+  totalCountdown = 0;
 
   constructor() {}
 
