@@ -1,4 +1,4 @@
-#Timer-Progress-Phase-I
+# Timer-Progress-Phase-I
 
 **Goal of this project is to implement:**
 
