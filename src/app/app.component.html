@@ -1,4 +1,4 @@
-<h1>Timer Countdown</h1>
+<h1>Timer Progress</h1>
 <app-progress-bar [progress]="progressPercentage"></app-progress-bar>
 <app-countdown
   #countdown
@@ -7,7 +7,7 @@
   (onComplete)="completeProgress()"
 ></app-countdown>
 <div class="countdown-input">
-  <label for="totalCountdown">Init on: </label>
+  <label for="totalCountdown">Timer countdown : </label>
   <input type="text" [(ngModel)]="totalCountdown" />
 </div>
 

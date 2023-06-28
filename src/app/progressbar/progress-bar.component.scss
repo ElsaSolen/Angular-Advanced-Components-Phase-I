@@ -8,8 +8,12 @@
 
   div {
     background: #38678f;
+    color: white;
     height: 100%;
     width: 30%;
+    span {
+      padding-left: 15px;
+    }
   }
 
   .all {

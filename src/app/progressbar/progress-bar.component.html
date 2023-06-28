@@ -1,1 +1,5 @@
-<div [style.width.%]="progress"></div>
+<div [style.width.%]="progress">
+  <span>
+    {{ progress % 1 === 0 ? progress.toFixed(0) : progress.toFixed(2) }}%</span
+  >
+</div>
